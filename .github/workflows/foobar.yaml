@@ -1,5 +1,9 @@
 name: FooBarCI
 
+env:
+  PYTHON_RUN_ENV: test
+  PYTHON_VERSION: 3.13
+
 on:
   workflow_call:
 
