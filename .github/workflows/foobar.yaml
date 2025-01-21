@@ -1,0 +1,17 @@
+name: FooBarCI
+
+on:
+  workflow_call:
+
+jobs:
+  run_script:
+    name: Run script
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "${{ env.PYTHON_VERSION }}"
+          cache: pip
+      - name: Run python script
+        run: python main.py
